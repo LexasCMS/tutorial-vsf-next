@@ -1,19 +1,15 @@
 <template>
   <div id="home">
-    <LazyHydrate when-idle>
-      <SfHero class="hero">
-        <SfHeroItem
-          v-for="(hero, i) in heroes"
-          :key="i"
-          :title="hero.title"
-          :subtitle="hero.subtitle"
-          :button-text="hero.buttonText"
-          :background="hero.background"
-          :image="hero.image"
-          :class="hero.className"
-        />
-      </SfHero>
-    </LazyHydrate>
+    <SfHero class="hero">
+      <SfHeroItem
+        v-for="promoBanner in promoBanners"
+        :key="promoBanner.id"
+        :title="promoBanner.heading"
+        :subtitle="promoBanner.subHeading"
+        :button-text="promoBanner.buttonText"
+        :image="promoBanner.backgroundImage.url"
+      />
+    </SfHero>
 
     <LazyHydrate when-visible>
       <SfBannerGrid :banner-grid="1" class="banner-grid">
@@ -108,6 +104,8 @@ import {
 import InstagramFeed from '~/components/InstagramFeed.vue';
 import MobileStoreBanner from '~/components/MobileStoreBanner.vue';
 import LazyHydrate from 'vue-lazy-hydration';
+import { onSSR } from '@vue-storefront/core';
+import { useContent } from 'vsf-lexascms';
 
 export default {
   name: 'Home',
@@ -126,6 +124,21 @@ export default {
     SfButton,
     MobileStoreBanner,
     LazyHydrate
+  },
+  setup() {
+    const { content: promoBanners, search } = useContent();
+
+    onSSR(async () => {
+      await search({
+        type: 'collection',
+        contentType: 'promoBanner',
+        params: {
+          include: 'backgroundImage'
+        }
+      });
+    });
+
+    return { promoBanners }
   },
   data() {
     return {
