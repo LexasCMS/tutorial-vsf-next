@@ -26,6 +26,7 @@ Of course, you can play around with this source code by deploying it to your own
 2. Within LexasCMS:
     1. Create a new space using the **E-commerce Tutorial (Vue Storefront)** template
     2. Navigate to **Settings > General** and take note of your space ID
+    3. Navigate to **Settings > API Keys** and create a new API key, taking note of the generated token
 4. Click the below button and follow the instructions
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FLexasCMS%2Ftutorial-vsf-next%2Ftree%2Fpart-2-personalisation&env=LEXASCMS_SPACE_ID&project-name=lexascms-vsf-next-tutorial&repo-name=lexascms-vsf-next-tutorial)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FLexasCMS%2Ftutorial-vsf-next%2Ftree%2Fpart-3-visual-previews&env=LEXASCMS_SPACE_ID,LEXASCMS_API_KEY&project-name=lexascms-vsf-next-tutorial&repo-name=lexascms-vsf-next-tutorial)
