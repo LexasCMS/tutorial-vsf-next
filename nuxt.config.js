@@ -73,7 +73,8 @@ export default {
       i18n: {
         useNuxtI18nConfig: true
       }
-    }]
+    }],
+    ['vsf-lexascms/nuxt']
   ],
   modules: [
     'nuxt-i18n',
