@@ -125,7 +125,7 @@ export default {
     MobileStoreBanner,
     LazyHydrate
   },
-  setup() {
+  setup(_, context) {
     const { content: promoBanners, search } = useContent();
 
     onSSR(async () => {
@@ -134,6 +134,11 @@ export default {
         contentType: 'promoBanner',
         params: {
           include: 'backgroundImage'
+        },
+        context: {
+          audienceAttributes: {
+            localTemperature: context.root.$route.query.localTemp ? parseInt(context.root.$route.query.localTemp, 10) : null
+          }
         }
       });
     });
