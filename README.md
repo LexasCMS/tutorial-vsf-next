@@ -1,22 +1,31 @@
-# theme
+# Vue Storefront Next Tutorial
 
-> My breathtaking Nuxt.js project
+This is the complete tutorial source code for integrating [LexasCMS](https://www.lexascms.com/) with [Vue Storefront Next](https://www.vuestorefront.io/).
 
-## Build Setup
+<p align="center">
+  <img src="preview@2x.jpg" alt="Vue Storefront Next Tutorial Preview" style="max-width:90%;" />
+</p>
 
-``` bash
-# install dependencies
-$ yarn install
+## Tutorial
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+This tutorial is split into 3 parts, details of which can be found below:
 
-# build for production and launch server
-$ yarn build
-$ yarn start
+- [Part 1 - Headless CMS Integration](https://www.lexascms.com/blog/integrating-a-headless-cms-with-vue-storefront-next/) [branch: [`part-1-cms-integration`](https://github.com/LexasCMS/tutorial-vsf-next/tree/part-1-cms-integration)]
+- [Part 2 - Personalised Content](https://www.lexascms.com/blog/implementing-personalised-content-with-vue-storefront-next/) [branch: [`part-2-personalisation`](https://github.com/LexasCMS/tutorial-vsf-next/tree/part-2-personalisation)]
+- [Part 3 - Visual Content Previews](https://www.lexascms.com/blog/visual-content-previews-with-vue-storefront-next/) [branch: [`part-3-visual-previews`](https://github.com/LexasCMS/tutorial-vsf-next/tree/part-3-visual-previews)]
 
-# generate static project
-$ yarn generate
-```
+## Live Demo
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+[Click here](https://lexascms-tutorial-vsf-next.vercel.app/) to view a live demo of this repo.
+
+## Deploy to Vercel
+
+Of course, you can play around with this source code by deploying it to your own Vercel account. To do so, please follow the instructions below:
+
+1. If you don't already have one, [create a LexasCMS account](https://app.lexascms.com/signup)
+2. Within LexasCMS:
+    1. Create a new space using the **E-commerce Tutorial (Vue Storefront)** template
+    2. Navigate to **Settings > General** and take note of your space ID
+4. Click the below button and follow the instructions
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https%3A%2F%2Fgithub.com%2FLexasCMS%2Ftutorial-vsf-next&env=LEXASCMS_SPACE_ID&project-name=lexascms-vsf-next-tutorial&repo-name=lexascms-vsf-next-tutorial)
